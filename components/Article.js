@@ -86,6 +86,41 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Call me All',
+    date: 'March 31st, 1978',
+    firstParagraph: `A man walks down the street
+    He says, "Why am I soft in the middle, now?
+    Why am I soft in the middle?
+    The rest of my life is so hard
+    I need a photo-opportunity
+    I want a shot at redemption
+    Don't want to end up a cartoon
+    In a cartoon graveyard"
+    Bonedigger, Bonedigger
+    Dogs in the moonlight
+    Far away in my well-lit door
+    Mr. Beerbelly, Beerbelly
+    Get these mutts away from me
+    You know, I don't find this stuff amusing anymore `,
+
+    secondParagraph: `If you'll be my body guard, I can be your long lost pal.
+    I can call you betty, and betty when you call me you can call me al `,
+
+    thirdParagraph: `A man walks down the street
+    He says, "Why am I short of attention?
+    Got a short little span of attention
+    And, whoa, my nights are so long
+    Where's my wife and family?
+    What if I die here?
+    Who'll be my role model
+    Now that my role model is gone, gone?"
+    He ducked back down the alley
+    With some roly-poly little bat-faced girl
+    All along, along
+    There were incidents and accidents
+    There were hints and allegations`
   }
 ];
 
@@ -120,6 +155,7 @@ const data = [
 const articles = document.querySelector('.articles')
 
 function articleMaker(articleObj){
+  
 
   // add variables 
   const article = document.createElement('div')
@@ -142,7 +178,7 @@ function articleMaker(articleObj){
   // add classes
   article.classList.add('article')
   date.classList.add('date')
-  expandButton.classList.add('classButton')
+  expandButton.classList.add('expandButton')
 
   // add text content
   title.textContent = articleObj.title;
@@ -156,9 +192,20 @@ function articleMaker(articleObj){
 
   // add event listener
 
-  expandButton.addEventListener('click',)
+  expandButton.addEventListener('click', event =>{
+    article.classList.toggle('article-open')
+    if (expandButton.textContent === '-'){
+      expandButton.textContent = '+'
+    }else{
+      expandButton.textContent = '-'
+    }
+  })
   return article
 
 }
 
 // make a for each loop for the stuff
+data.forEach(article => {
+  const story = articleMaker(article)
+  articles.prepend(story)
+});
