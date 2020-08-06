@@ -91,36 +91,36 @@ const data = [
     title: 'Call me All',
     date: 'March 31st, 1978',
     firstParagraph: `A man walks down the street
-    He says, "Why am I soft in the middle, now?
-    Why am I soft in the middle?
-    The rest of my life is so hard
-    I need a photo-opportunity
-    I want a shot at redemption
-    Don't want to end up a cartoon
-    In a cartoon graveyard"
-    Bonedigger, Bonedigger
-    Dogs in the moonlight
-    Far away in my well-lit door
-    Mr. Beerbelly, Beerbelly
-    Get these mutts away from me
-    You know, I don't find this stuff amusing anymore `,
+      He says, "Why am I soft in the middle, now?
+      Why am I soft in the middle?
+      The rest of my life is so hard
+      I need a photo-opportunity
+      I want a shot at redemption
+      Don't want to end up a cartoon
+      In a cartoon graveyard"
+      Bonedigger, Bonedigger
+      Dogs in the moonlight
+      Far away in my well-lit door
+      Mr. Beerbelly, Beerbelly
+      Get these mutts away from me
+      You know, I don't find this stuff amusing anymore `,
 
     secondParagraph: `If you'll be my body guard, I can be your long lost pal.
-    I can call you betty, and betty when you call me you can call me al `,
+      I can call you betty, and betty when you call me you can call me al `,
 
     thirdParagraph: `A man walks down the street
-    He says, "Why am I short of attention?
-    Got a short little span of attention
-    And, whoa, my nights are so long
-    Where's my wife and family?
-    What if I die here?
-    Who'll be my role model
-    Now that my role model is gone, gone?"
-    He ducked back down the alley
-    With some roly-poly little bat-faced girl
-    All along, along
-    There were incidents and accidents
-    There were hints and allegations`
+      He says, "Why am I short of attention?
+      Got a short little span of attention
+      And, whoa, my nights are so long
+      Where's my wife and family?
+      What if I die here?
+      Who'll be my role model
+      Now that my role model is gone, gone?"
+      He ducked back down the alley
+      With some roly-poly little bat-faced girl
+      All along, along
+      There were incidents and accidents
+      There were hints and allegations`
   }
 ];
 
@@ -156,7 +156,7 @@ const articles = document.querySelector('.articles')
 
 function articleMaker(articleObj){
   
-
+  // debugger
   // add variables 
   const article = document.createElement('div')
   const title = document.createElement('h2')
